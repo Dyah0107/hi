@@ -1,0 +1,168 @@
+body {
+    background-color: #ffeef2;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Kolase Background 20 Foto */
+#photo-collage-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    grid-template-rows: repeat(4, 1fr);
+    gap: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    z-index: 0;
+    background-color: #ffeef2;
+}
+
+.bg-photo {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s ease-out;
+}
+
+.bg-photo.reveal {
+    opacity: 0.4; 
+    transform: scale(1);
+}
+
+/* Screens */
+.screen {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    display: flex; justify-content: center; align-items: center;
+    transition: all 0.6s ease-in-out;
+    z-index: 10;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale(0.9);
+}
+
+/* Cards */
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    border-radius: 30px; 
+    box-shadow: 0 15px 30px rgba(255, 77, 109, 0.2);
+    text-align: center;
+    max-width: 320px;
+    width: 85%;
+}
+
+.profile-img { 
+    width: 140px; 
+    border-radius: 20px;
+    margin-bottom: 10px; }
+
+/* Buttons */
+.btn-group { 
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+    margin-top: 20px; }
+button {
+    border: none; 
+    padding: 12px 25px; 
+    border-radius: 50px;
+    font-size: 16px; 
+    font-weight: 700; 
+    cursor: pointer;
+    transition: 0.3s;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#yesBtn { background: linear-gradient(45deg, #ff4d6d, #ff758f); color: white; }
+#noBtn { 
+    background: #eee; 
+    color: #888; 
+    transition: transform 0.3s ease, left 0.3s ease, top 0.3s ease;
+}
+
+/* Modal & Envelope */
+#secret-envelope {
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px;
+    cursor: pointer; 
+    z-index: 100; 
+    text-align: center;
+}
+.envelope { 
+    font-size: 45px; 
+    animation: wobble 2s infinite; }
+
+.modal {
+    position: fixed; 
+    z-index: 200; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%;
+    background: rgba(0,0,0,0.5); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+.modal-content {
+    background: #fff9fa; 
+    padding: 25px; 
+    border-radius: 20px;
+    width: 80%; 
+    max-width: 400px; 
+    position: relative;
+}
+.letter-body { 
+    line-height: 1.6; 
+    color: #444; }
+.closing { 
+    font-weight: bold; 
+    color: #ff4d6d; 
+    margin-top: 15px; }
+.close-modal { 
+    position: absolute; 
+    top: 10px; 
+    right: 15px; 
+    cursor: pointer; 
+    font-size: 25px; }
+
+.hidden-element { 
+    display: none !important; }
+
+@keyframes wobble { 
+    0%, 100% { 
+        transform: rotate(-5deg); 
+    } 50% { transform: rotate(5deg); } }
+@keyframes pulse { from { transform: scale(1); } to { transform: scale(1.15); } }
+.heart-main { font-size: 50px; animation: pulse 0.8s infinite alternate; }
+h1 {
+    color: #ff4d6d; /* Pink kemerahan yang cantik */
+    margin: 10px 0;
+}
+
+/* Efek Getar */
+@keyframes shake {
+    0%, 100% { transform: translate(0); }
+    25% { transform: translate(-5px); }
+    75% { transform: translate(5px); }
+}
+.shake-screen { animation: shake 0.3s; }
+
+/* Animasi Kursor Hati */
+@keyframes fadeUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-50px); opacity: 0; }
+}

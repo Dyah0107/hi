@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine? ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="photo-collage-bg" class="hidden-element"></div>
+
+    <div id="particle-container"></div>
+
+    <div id="question-screen" class="screen">
+        <div class="card">
+            <img src="image/hi.jpg" alt="Cute Bear" class="profile-img">
+            <h2>Do You Love Me? 🌹</h2>
+            <div class="btn-group">
+                <button id="yesBtn">Yes! 😍</button>
+                <button id="noBtn">No 😢</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-card-screen" class="screen hidden">
+        <div class="card">
+            <div class="heart-main">❤️</div>
+            <h1>Happy Valentine's Day!</h1>
+            <p class="special-text">"I knew you'd say yes! You make every day feel like February 14th."</p>
+            <div class="footer">Made with Love by ☀️</div>
+        </div>
+    </div>
+
+    <div id="secret-envelope" class="hidden-element">
+        <div class="envelope">💌</div>
+        <span>Click for a surprise!</span>
+    </div>
+
+    <div id="letter-modal" class="modal hidden-element">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            
+            <div id="password-section">
+                <h3>Secret Code! 🕵️‍♂️</h3>
+                <p>When did we start dating? <br> <small>(Format: DDMMYY)</small></p>
+                <input type="text" id="passInput" placeholder="Input the code..." 
+                       style="width:100%; padding:10px; margin:15px 0; border:2px solid #ffb3c1; border-radius:10px; text-align:center;">
+                <button id="submitPass" style="background:#ff4d6d; color:white; width:100%; border-radius:10px;">Open the Letter ❤️</button>
+                <p id="errorMsg" style="color:red; display:none; font-size:12px; margin-top:10px;">Wrong Answer! Try Again 😋</p>
+            </div>
+
+            <div id="letter-body-content" class="hidden-element">
+                <div class="letter-body">
+                    <h3>Hiii Pacar!!!</h3>
+                    <p>Terima kasih ya udah ada di hidup aku. Thank you for loving me, for staying, and for being the best part of my days. Aku beneran ngerasa seberuntung itu bisa punya kamu. ❤️</p>
+                    <p>Aku nggak tahu apa yang ada di depan nanti, tapi selama itu sama kamu, aku yakin semuanya akan baik-baik saja.</p>
+                    <p>I’m so grateful for us, for our journey, and for every little thing that makes 'you' and 'me' become 'us'.</p>
+                    <p class="closing">Happy our first Valentine’s Day, sayang. ❤️</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
